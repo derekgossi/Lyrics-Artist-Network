@@ -1,0 +1,14 @@
+# Lyrics-Artist-Network
+Complex network analysis of lyrical data from the Million Song Dataset
+
+## Abstract
+Traditional music recommendation systems rely on collaborative filtering to recommend songs or artists. This is a computationally efficient and well-performing method of recommendation, but it does not scale well in cases where there is limited or no user play count or rating data. For these cases, it may be useful to consider content-based recommendation, or recommendation based on the actual content of a given song or artist’s catalog of songs. This analysis considers a content-based recommendation system based on lyrical data alone, and compares a complex network of lyrical recommendations to an equivalent network—in the sense of node set and average outdegree—which utilizes a traditional item-based collaborative filtering methodology to produce the recommendations. 
+
+User generated tag data from Last.fm is used to produce 23 subgraphs of each network based on tag categories representing musical genre, mood, and gender of vocalist. These subgraphs are analyzed to determine how recommendations within each network tend to stay within each of these tag categories. 
+
+Finally, the lyrical recommendations are compared to the collaborative filtering recommendations using a Rank Biased Overlap metric, to determine how well lyrical recommendations perform compared to random recommendations assuming the collaborative filtering recommendations represent “true” preferences. We see that the lyrical network is significantly more clustered within tag categories than the collaborative filtering network, particularly within small musical niches, and recommendations based on lyrics alone perform 12.6 times better than random recommendations. 
+
+When actual user data is unavailable, which especially holds true for many new and emerging songs or artists, it may be advantageous to consider content-based recommendation 
+methods in determining the initial recommendations to and from this artist or song in the recommendation network. This analysis shows that even a purely lyric-based method provides significant information about the tags this artist or song might have associated with it, and to a lesser extent the expected ranking of similar artists or songs in a collaborative filtering setting given future user play count data. Still, this analysis shows that recommending music based on lyrics alone performs significantly better than random recommendations. 
+
+Lyrical analysis may be especially successful for niche genres such as Country, Metal, Blues, Hip Hop, and Christian—where the lyric network in this analysis was successful at differentiating these genres from others. At the very least, lyrical analysis could verify whether or not a given recommendation in the lack of user data is “very bad,” as it could determine how far a user is venturing from their typical listening history.
